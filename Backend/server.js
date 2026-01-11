@@ -52,7 +52,7 @@ app.delete("/api/tasks/:id", async (req,res)=>{
     }
 });
 
-app.listen(process.env.PORT,()=>{
+app.listen(process.env.PORT || 4000,()=>{
     console.log("Server is running on port 5000")
 });
 
