@@ -4,7 +4,7 @@ function TaskList(props) {
     return (
         <>
             {
-                props.taskInList.map(task=>(
+                props.taskInList.slice().reverse().map(task=>(
                 <Task 
                     task={task} 
                     deleteTask={props.deleteTask}
