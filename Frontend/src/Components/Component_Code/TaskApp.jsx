@@ -3,11 +3,13 @@ import TaskBar from "./TaskBar";
 import TaskList from "./TaskList";
 import {nanoid} from "nanoid";
 
+const api=import.meta.env.VITE_API_URL;
+
 function TaskApp() {
     const [taskInList,setTaskInList]=React.useState([]);
 
     const fetchTasks= async ()=>{
-        const res=await fetch("http://localhost:5000/api/tasks");
+        const res=await fetch(`${api}/api/tasks`);
         const data=await res.json();
         setTaskInList(data);
     }
@@ -22,7 +24,7 @@ function TaskApp() {
             task:task
         };
 
-        await fetch("http://localhost:5000/api/tasks",{
+        await fetch(`${api}/api/tasks`,{
             method:"POST",
             headers:{"Content-Type":"application/json"},
             body: JSON.stringify({task:taskWithID})
@@ -31,14 +33,14 @@ function TaskApp() {
     };
 
     const deleteTask=async (id)=>{
-        await fetch(`http://localhost:5000/api/tasks/${id}`,{
+        await fetch(`${api}/api/tasks/${id}`,{
             method:"DELETE"
         });
         fetchTasks();
     };
 
     const editTask=async (id, editedTask)=>{
-        await fetch(`http://localhost:5000/api/tasks/${id}`,{
+        await fetch(`${api}/api/tasks/${id}`,{
             method:"PUT",
             headers:{"Content-Type":"application/json"},
             body:JSON.stringify({'editedTask':editedTask})
