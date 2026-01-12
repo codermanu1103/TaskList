@@ -1,0 +1,21 @@
+.taskbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90px;
+    width: 100%;
+    background-color: #d2c2ac;
+    border: 2px solid #726a60;
+}
+
+#task {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 7px;
+    margin: 10px;
+    width: 80%;
+    border-radius: 5px;
+    font-size: larger;
+    border: 2px solid transparent;
+}

@@ -1,0 +1,39 @@
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    margin: 5px;
+    margin-top: 2px;
+    border-radius: 5px;
+    border-color: goldenrod;
+    background-color: gainsboro;
+}
+
+.button:hover{
+    zoom: 1.02;
+    cursor: pointer;
+}
+
+.task {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: large;
+    padding: 6px;
+    padding-bottom: 4px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.taskcontainer {
+    display: flex;
+}
+
+.outercontainer {
+    background-color: #c9eded;
+    border: 1px solid #cfb1bf;
+    border-radius: 10px;
+    width: 100%;
+}
